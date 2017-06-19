@@ -77,7 +77,7 @@ def unet_model_3d(input_shape, downsize_filters_factor=1, pool_size=(2, 2, 2), n
                    padding='same')(conv7)
 
     conv8 = Conv3D(n_labels, (1, 1, 1))(conv7)
-    act = Activation('sigmoid')(conv8)
+    act = Activation('linear')(conv8)
     model = Model(inputs=inputs, outputs=act)
 
     model.compile(optimizer=Adam(lr=initial_learning_rate), loss=dice_coef_loss, metrics=[dice_coef])
