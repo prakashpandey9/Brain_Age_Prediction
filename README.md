@@ -6,7 +6,7 @@
 * We implemented a 3D convolutional Neural Network in Keras which was trained over T1 weighted MRI scan of around 1500 healthy person.
 * The difference of brain age and chronological can be used to detect the presence of a mental disorder if there is any such deformity.
 
-# Installation
+## Installation
 * Numpy
 * Pandas
 * Nibabel
